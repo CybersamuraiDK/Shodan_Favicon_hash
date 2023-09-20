@@ -14,4 +14,5 @@ for url in urls:
         favicon = codecs.encode(response.content, "base64")
         hash = mmh3.hash(favicon)
         print(f'URL: {url}, Favicon Hash: {hash}')
+        print(f'shodan command: http.favicon.hash:-{hash}')
 
